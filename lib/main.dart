@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         MainPage.idKey: (context) => MainPage(),
         FoodDetailsPage.idKey: (context) => FoodDetailsPage(
             onBackButtonPressed: () {},
-            transactionModel: TransactionModel(food: mockFood[0]))
+            transactionModel: mockTransaction[0])
       },
     );
   }

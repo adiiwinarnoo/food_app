@@ -5,7 +5,7 @@ enum TransactionStatus { delivered, on_delivery, pending, cancelled }
 class TransactionModel extends Equatable {
   final int? id;
   final FoodModels food;
-  final int? quantity;
+  int? quantity;
   final int? total;
   final DateTime? dateTimeOrder;
   final TransactionStatus? statusTransaction;
@@ -42,7 +42,7 @@ class TransactionModel extends Equatable {
 List<TransactionModel> mockTransaction = [
   TransactionModel(
       id: 1,
-      food: mockFood[1],  // Named parameter untuk food
+      food: mockFood[1],
       quantity: 2,
       total: (mockFood[1].price * 2 * 1.1).round() + 12000,
       dateTimeOrder: DateTime.now(),
